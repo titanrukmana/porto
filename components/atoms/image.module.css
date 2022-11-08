@@ -1,0 +1,43 @@
+.imageContainer {
+	position: relative !important;
+}
+
+.imageContainer > span {
+	position: relative !important;
+}
+
+.image {
+	object-fit: contain;
+	width: 100% !important;
+	position: relative !important;
+	height: auto !important;
+}
+
+.underline {
+	-webkit-text-decoration: underline wavy #e4ff1a;
+	text-decoration: underline wavy #e4ff1a;
+	text-underline-offset: 6px;
+}
+
+.arrow {
+	-webkit-animation: mover 0.4s infinite alternate;
+	animation: mover 0.4s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
