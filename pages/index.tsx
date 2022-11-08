@@ -16,10 +16,12 @@ export default function Home() {
 				</Head>
 			</div>
 			<ThemeProvider theme={theme}>
-				<Header />
-				<Page1 />
-				<div style={{ marginBottom: 50 }} />
-				<Page2 />
+				<div style={{ backgroundColor: "#020100" }}>
+					<Header />
+					<Page1 />
+					<div style={{ marginBottom: 50 }} />
+					<Page2 />
+				</div>
 			</ThemeProvider>
 		</>
 	);

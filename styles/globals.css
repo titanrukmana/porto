@@ -5,6 +5,8 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Karla", sans-serif;
+	background-color: #020100;
+	color: #f2f4f3;
 }
 
 a {
@@ -21,7 +23,7 @@ a {
 		color-scheme: dark;
 	}
 	body {
-		color: white;
-		background: black;
+		color: #f2f4f3;
+		background: #020100;
 	}
 }

@@ -17,7 +17,7 @@ export default function Page1() {
 					<Grid item>
 						<Grid container alignItems="center">
 							<Grid item xs={1} sx={{ marginRight: "5px" }}>
-								<Divider color="#F2F4F3" />
+								<div style={{ height: "1px", borderTop: "2px solid #F2F4F3" }} />
 							</Grid>
 							<Grid item>
 								<Typography variant="body2">HELLO, I AM</Typography>
