@@ -1,10 +1,10 @@
-import { Container, Grid, Divider, Typography, Button, ButtonBase } from "@mui/material";
+import { Container, Grid, Typography, ButtonBase } from "@mui/material";
 import { Element } from "react-scroll";
 import { GetInTouch } from "../atoms/button";
 import Image from "next/image";
-import styles from "../atoms/image.module.css";
+import styles from "../css.module.css";
 
-export default function Page1() {
+export default function Intro() {
 	const socmed = [
 		{ key: 0, name: "instagram", url: "https://instagram.com/titanrmn" },
 		{ key: 1, name: "linkedin", url: "https://linkedin.com/in/titan-rukmana" },
@@ -32,7 +32,7 @@ export default function Page1() {
 						</Grid>
 						<Grid container sx={{ marginBottom: 4 }}>
 							<Grid item xs={12}>
-								<Typography variant="h6">Full stack website developer currently based in Indonesia.</Typography>
+								<Typography variant="h6">Full stack software developer currently based in Indonesia.</Typography>
 							</Grid>
 							<Grid item xs={12}>
 								<Typography variant="h6">

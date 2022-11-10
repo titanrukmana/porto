@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Grid, Container, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import Header from "../components/molecules/header";
-import Page1 from "../components/molecules/page1";
-import Page2 from "../components/molecules/page2";
+import Intro from "../components/templates/intro";
+import Stack from "../components/templates/stack";
 import { theme } from "../styles/theme";
 
 export default function Home() {
@@ -18,9 +18,9 @@ export default function Home() {
 			<ThemeProvider theme={theme}>
 				<div style={{ backgroundColor: "#020100" }}>
 					<Header />
-					<Page1 />
+					<Intro />
 					<div style={{ marginBottom: 50 }} />
-					<Page2 />
+					<Stack />
 				</div>
 			</ThemeProvider>
 		</>

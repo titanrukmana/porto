@@ -25,6 +25,6 @@ export const GetInTouch = styled(Button)({
 export const DrawerButton = styled(ButtonBase)({
 	padding: 20,
 	"&:hover": {
-		backgroundColor: "#333333",
+		backgroundColor: "#020100",
 	},
 });

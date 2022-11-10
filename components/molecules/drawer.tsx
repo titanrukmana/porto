@@ -2,13 +2,9 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import styles from "../css.module.css";
 import { useState } from "react";
-import { ButtonBase, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Link } from "react-scroll";
 import { Container } from "@mui/system";
 import Image from "next/image";
@@ -40,39 +36,44 @@ export default function TopDrawer() {
 				height: "100vh",
 				color: "#F2F4F3",
 				backgroundColor: "#020100",
-				px: {
-					xs: 4,
-					md: 20,
-				},
 				py: { xs: 5, md: 10 },
 			}}
 			role="presentation"
 			onKeyDown={toggleDrawer(false)}
 		>
-			<Grid container alignItems="center" justifyContent="center" sx={{ backgroundColor: "#020100" }}>
-				<Grid item sx={{ marginLeft: "auto" }}>
-					<Typography sx={{ cursor: "pointer" }} variant="h3" onClick={toggleDrawer(false)}>
-						X
-					</Typography>
+			<Container maxWidth="lg">
+				<Grid container alignItems="center" justifyContent="center" sx={{ backgroundColor: "#020100" }}>
+					<Grid item sx={{ marginLeft: "auto" }}>
+						<Typography sx={{ cursor: "pointer" }} variant="h3" onClick={toggleDrawer(false)}>
+							X
+						</Typography>
+					</Grid>
+					<Grid item xs={12} sx={{ textAlign: "center" }}>
+						<List>
+							{section.map((item) => {
+								return (
+									<div key={item.key}>
+										<Link
+											to={item.point}
+											offset={-30}
+											spy={true}
+											smooth={true}
+											delay={100}
+											style={{ cursor: "pointer" }}
+										>
+											<DrawerButton disableRipple className={styles.drawerButton}>
+												<Typography variant="h3" onClick={toggleDrawer(false)}>
+													{item.point.toUpperCase()}
+												</Typography>
+											</DrawerButton>
+										</Link>
+									</div>
+								);
+							})}
+						</List>
+					</Grid>
 				</Grid>
-				<Grid item xs={12} sx={{ textAlign: "center" }}>
-					<List>
-						{section.map((item) => {
-							return (
-								<div key={item.key}>
-									<Link to={item.point} offset={-30} spy={true} smooth={true} delay={100} style={{ cursor: "pointer" }}>
-										<DrawerButton>
-											<Typography variant="h3" onClick={toggleDrawer(false)}>
-												{item.point.toUpperCase()}
-											</Typography>
-										</DrawerButton>
-									</Link>
-								</div>
-							);
-						})}
-					</List>
-				</Grid>
-			</Grid>
+			</Container>
 		</Box>
 	);
 

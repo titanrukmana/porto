@@ -5,7 +5,7 @@ import Image from "next/image";
 import Marquee from "react-easy-marquee";
 import CustomImage from "../atoms/image";
 
-export default function Page1() {
+export default function Stack() {
 	const stack = [
 		{ key: 0, name: "javascript" },
 		{ key: 1, name: "typescript" },
@@ -18,6 +18,11 @@ export default function Page1() {
 		{ key: 8, name: "python" },
 		{ key: 9, name: "django" },
 		{ key: 10, name: "go" },
+		{ key: 11, name: "mongodb" },
+		{ key: 12, name: "mysql" },
+		{ key: 13, name: "postgresql" },
+		{ key: 14, name: "redis" },
+		{ key: 15, name: "influxdb" },
 	];
 	return (
 		<Element name="skills">
@@ -31,8 +36,14 @@ export default function Page1() {
 					<Marquee background="#E4FF1A" duration={40000}>
 						{stack.map((item) => {
 							return (
-								<Grid item container key={item.key} sx={{ alignItems: "center", marginRight: "10px" }}>
-									<CustomImage src={`/marquee/${item.name}.png`} width="px" alt={item.name} priority={true} />
+								<Grid item container key={item.key} sx={{ alignItems: "center", mx: "5px" }}>
+									<CustomImage
+										src={`/marquee/${item.name}.png`}
+										width="px"
+										alt={item.name}
+										priority={true}
+										title={item.name}
+									/>
 								</Grid>
 							);
 						})}

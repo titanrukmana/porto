@@ -19,6 +19,12 @@
 	text-underline-offset: 6px;
 }
 
+.drawerButton:hover {
+	-webkit-text-decoration: underline #e4ff1a;
+	text-decoration: underline #e4ff1a;
+	text-underline-offset: 8px;
+}
+
 .arrow {
 	-webkit-animation: mover 0.4s infinite alternate;
 	animation: mover 0.4s infinite alternate;
