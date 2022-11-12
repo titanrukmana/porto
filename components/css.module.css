@@ -1,0 +1,126 @@
+.imageContainer {
+	position: relative !important;
+}
+
+.imageContainer > span {
+	position: relative !important;
+}
+
+.image {
+	object-fit: contain;
+	width: 100% !important;
+	position: relative !important;
+	height: auto !important;
+}
+
+.underline {
+	-webkit-text-decoration: underline wavy #e4ff1a;
+	text-decoration: underline wavy #e4ff1a;
+	text-underline-offset: 6px;
+}
+
+.drawerButton {
+	transition: all ease-in-out 0.6s;
+	-webkit-transition: all ease-in-out 0.6s;
+	-moz-transition: all ease-in-out 0.6s;
+	animation: fadeIn 2s;
+}
+
+.drawerButton:hover {
+	box-shadow: inset 600px 0 0 0 #e4ff1a;
+	color: #020100;
+	transform: scale(1.2);
+}
+
+.drawerText {
+	font-family: "Source Code Pro", "monospace";
+	font-weight: 400;
+}
+
+.arrow {
+	-webkit-animation: mover 0.4s infinite alternate;
+	animation: mover 0.4s infinite alternate;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.menubtn {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	padding-top: 7px;
+	transition: all 0.2s ease-in-out;
+}
+
+.menubtn:hover {
+	transform: scale(1.2);
+}
+
+.hamburger {
+	position: absolute;
+	display: flex;
+	flex: 1;
+	width: 30px;
+	height: 3px;
+	background: #f2f4f3;
+	transition: all 0.5s ease-in-out;
+}
+
+.hamburger2 {
+	display: flex;
+	flex: 1;
+	position: absolute;
+	width: 15px;
+	height: 3px;
+	background: #f2f4f3;
+	transition: all 0.5s ease-in-out;
+	transform: translateY(16px);
+}
+
+.menubtnopen .hamburger {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menubtnopen .hamburger2 {
+	transform: rotate(-45deg) scale(2, 1) translate(-5px, 0px);
+}
+
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		top: -3rem;
+		opacity: 0;
+	}
+
+	100% {
+		top: 25%;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700;800&display=swap");
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Karla", sans-serif, "Source Code Pro", monospace;
+	background-color: #020100;
+	color: #f2f4f3;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: #f2f4f3;
+		background: #020100;
+	}
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #e4ff1a;
+	border: 1px solid #020100;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
