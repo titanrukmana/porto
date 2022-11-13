@@ -19,7 +19,7 @@ export default function Services() {
 		{
 			key: 2,
 			title: "Cloud & DevOps",
-			tags: ["Docker", "Jenkins", "Kubernetes", "Auto Scale", "Cloud Host"],
+			tags: ["Docker", "Kubernetes", "CI/CD", "Auto Scale", "Cloud Host"],
 			icon: "/cicd.png",
 		},
 		{
@@ -30,7 +30,7 @@ export default function Services() {
 		},
 	];
 	return (
-		<Container sx={{ height: "100vh", marginTop: { md: "30px", xs: "15px" } }}>
+		<Container sx={{ py: { md: "30px", xs: "15px" } }}>
 			<Grid container spacing={2} justifyContent="space-between" alignItems="center" direction="row">
 				<Grid item xs={12}>
 					<Typography
@@ -39,6 +39,9 @@ export default function Services() {
 						sx={{ textAlign: "center", fontFamily: "Source Code Pro", fontWeight: 500 }}
 					>
 						&lt;Services&gt;
+					</Typography>
+					<Typography variant="body2" sx={{ textAlign: "center", fontFamily: "Source Code Pro", fontWeight: 400 }}>
+						What I can offer at the moment, although I am eager to learn something new.
 					</Typography>
 				</Grid>
 				<Grid item xs={0} md={2} />
@@ -51,32 +54,16 @@ export default function Services() {
 										border: "2px solid #e4ff1a",
 										height: "100%",
 										borderRadius: 0,
-										backgroundColor: "#020100",
-										color: "#e4ff1a",
+										backgroundColor: "#e4ff1a",
+										color: "#020100",
 									}}
 									elevation={0}
 								>
 									<CardMedia sx={{ px: 2, pt: 2 }}>
-										<div
-											style={{
-												display: "flex",
-												justifyContent: "center",
-												backgroundColor: "#e4ff1a",
-												width: "30px",
-												height: "30px",
-											}}
-										>
-											<CustomImage
-												width="20px"
-												priority={false}
-												src={item.icon}
-												alt={item.icon}
-												style={{ top: "15%" }}
-											/>
-										</div>
+										<CustomImage width="20px" priority={false} src={item.icon} alt={item.icon} />
 									</CardMedia>
 									<CardContent>
-										<Typography variant="h5" gutterBottom>
+										<Typography variant="h5" gutterBottom sx={{ fontFamily: "Source Code Pro" }}>
 											{item.title}
 										</Typography>
 										{item.tags.map((tag) => {
@@ -86,10 +73,10 @@ export default function Services() {
 													label={tag}
 													variant="outlined"
 													sx={{
-														backgroundColor: "#e4ff1a",
+														backgroundColor: "#020100",
 														borderRadius: 0,
-														border: "1px solid #e4ff1a",
-														color: "#020100",
+														border: "1px solid #020100",
+														color: "#e4ff1a",
 														fontFamily: "Source Code Pro",
 														mr: 1,
 														mt: 1,

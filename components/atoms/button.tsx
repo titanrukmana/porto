@@ -6,7 +6,7 @@ export const GetInTouch = styled(Button)({
 	border: "1px solid #F2F4F3",
 	textTransform: "none",
 	textDecoration: "none",
-	fontFamily: ["'Karla'", "sans-serif"].join(","),
+	fontFamily: ["'Source Code Pro'", "monospace"].join(","),
 	fontWeight: "Bold",
 	backgroundColor: "#020100",
 	color: "#F2F4F3",

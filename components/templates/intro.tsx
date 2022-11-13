@@ -21,21 +21,25 @@ export default function Intro() {
 								</Typography>
 							</Grid>
 							<Grid item xs={12}>
-								<Typography variant="h1">
-									<b className={styles.noselect}>
-										<span style={{ fontWeight: 800 }}>TITAN</span> RUKMANA
-									</b>
+								<Typography variant="h1" className={styles.noselect} sx={{ fontWeight: 500 }}>
+									<span style={{ fontWeight: 800 }}>TITAN</span> RUKMANA
 								</Typography>
 							</Grid>
 						</Grid>
 						<Grid container sx={{ marginBottom: 4 }}>
 							<Grid item xs={12}>
-								<Typography variant="h6" className={styles.noselect} style={{ fontWeight: 500 }}>
+								<Typography
+									variant="h6"
+									className={styles.noselect}
+									sx={{ fontWeight: 500, display: { xs: "inline", md: "block" } }}
+								>
 									Full stack software developer currently based in Indonesia.
-								</Typography>
-							</Grid>
-							<Grid item xs={12}>
-								<Typography variant="h6" className={styles.noselect} style={{ fontWeight: 500 }}>
+								</Typography>{" "}
+								<Typography
+									variant="h6"
+									className={styles.noselect}
+									sx={{ fontWeight: 500, display: { xs: "inline", md: "block" } }}
+								>
 									I find, combine, and align <span className={styles.underline}>any digital experience</span> you can
 									think of.
 								</Typography>

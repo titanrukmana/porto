@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
 	typography: {
-		fontFamily: `"Karla", sans-serif`,
+		fontFamily: `"Source Code Pro", monospace`,
 		fontSize: 14,
 		fontWeightLight: 300,
 		fontWeightRegular: 400,
@@ -34,34 +34,34 @@ theme.typography.h3 = {
 theme.typography.h5 = {
 	fontSize: "24px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "16px",
+		fontSize: "18px",
 	},
 };
 
 theme.typography.h6 = {
 	fontSize: "20px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "10px",
+		fontSize: "12px",
 	},
 };
 
 theme.typography.body2 = {
 	fontSize: "14px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "10px",
+		fontSize: "12px",
 	},
 };
 
 theme.typography.subtitle1 = {
 	fontSize: "16px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "10px",
+		fontSize: "12px",
 	},
 };
 
 theme.typography.subtitle2 = {
 	fontSize: "14px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "10px",
+		fontSize: "12px",
 	},
 };

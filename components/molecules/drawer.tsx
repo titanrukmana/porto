@@ -75,8 +75,13 @@ export default function TopDrawer() {
 							})}
 						</List>
 					</Grid>
-					<Grid item container justifyContent="center" alignItems="center" spacing={10}>
+					<Grid item container justifyContent="center" alignItems="center" direction="row" spacing={4}>
 						<Socmed />
+					</Grid>
+					<Grid item sx={{ marginTop: "20px" }}>
+						<Typography variant="subtitle2" sx={{ color: "#F2F4F3", fontFamily: "Source Code Pro", fontWeight: 400 }}>
+							titan170300@gmail.com
+						</Typography>
 					</Grid>
 				</Grid>
 			</Container>
