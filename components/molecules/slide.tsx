@@ -7,6 +7,7 @@ import styles from "./slide.module.css";
 import Container from "@mui/material/Container";
 import Chip from "@mui/material/Chip";
 import Link from "@mui/material/Link";
+import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
 export default function Slide() {
 	const [idx, setIdx] = useState(0);
@@ -33,12 +34,12 @@ export default function Slide() {
 			<Grid container justifyContent="flex-end">
 				<Grid item>
 					<IconButton onClick={handlePrev} className={styles.navButton} disableRipple>
-						<Typography>❮</Typography>
+						<IoMdArrowDropleft />
 					</IconButton>
 				</Grid>
 				<Grid item>
 					<IconButton onClick={handleNext} className={styles.navButton} disableRipple>
-						<Typography>❯</Typography>
+						<IoMdArrowDropright />
 					</IconButton>
 				</Grid>
 			</Grid>
