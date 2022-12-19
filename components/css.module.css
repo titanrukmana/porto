@@ -14,32 +14,71 @@
 }
 
 .underline {
-	-webkit-text-decoration: underline wavy #e4ff1a;
-	text-decoration: underline wavy #e4ff1a;
+	-webkit-text-decoration: underline wavy #fff;
+	text-decoration: underline wavy #fff;
 	text-underline-offset: 6px;
 }
 
-.drawerButton {
-	transition: all ease-in-out 0.6s;
-	-webkit-transition: all ease-in-out 0.6s;
-	-moz-transition: all ease-in-out 0.6s;
-	animation: fadeIn 2s;
+.visible {
+	color: #aaa;
+	transition: all ease-in-out 0.2s;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	animation: fadeIn 1s;
+}
+
+.hidden {
+	opacity: 0;
+	transition: all ease-in-out 0.2s;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	animation: fadeOut 0.5s;
+}
+
+.socmed {
+	color: #aaa;
+	transition: all ease-in-out 0.2s;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+
+.socmed:hover {
+	color: #e4ff1a;
+}
+
+.socmed:focus {
+	color: #fff;
 }
 
 .drawerButton:hover {
-	box-shadow: inset 600px 0 0 0 #e4ff1a;
-	color: #020100;
-	transform: scale(1.2);
+	color: #e4ff1a;
 }
 
 .drawerText {
-	font-family: "Source Code Pro", "monospace";
+	font-family: "Fira Code";
 	font-weight: 400;
+	text-align: left;
 }
 
 .arrow {
-	-webkit-animation: mover 0.4s infinite alternate;
-	animation: mover 0.4s infinite alternate;
+	/* -webkit-animation: mover 0.4s infinite alternate;
+	animation: mover 0.4s infinite alternate; */
+	font-size: 25px;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+
+.arrow:hover {
+	transform: scale(1.3);
 }
 
 .noselect {
@@ -60,10 +99,18 @@
 	cursor: pointer;
 	padding-top: 7px;
 	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
 }
 
-.menubtn:hover {
-	transform: scale(1.2);
+.openbutton {
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
 }
 
 .hamburger {
@@ -72,8 +119,12 @@
 	flex: 1;
 	width: 30px;
 	height: 3px;
-	background: #f2f4f3;
+	background: #fff;
 	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 
 .hamburger2 {
@@ -82,8 +133,12 @@
 	position: absolute;
 	width: 15px;
 	height: 3px;
-	background: #f2f4f3;
+	background: #fff;
 	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 	transform: translateY(16px);
 }
 
@@ -93,6 +148,28 @@
 
 .menubtnopen .hamburger2 {
 	transform: rotate(-45deg) scale(2, 1) translate(-5px, 0px);
+}
+
+.menubtn:hover {
+	transform: scale(1.2);
+}
+
+.rotate {
+	animation-name: rotate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: 50% 50%;
+	transform-box: fill-box;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 @-webkit-keyframes mover {
@@ -122,5 +199,17 @@
 	100% {
 		top: 25%;
 		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		top: 25%;
+		opacity: 1;
+	}
+
+	100% {
+		top: -3rem;
+		opacity: 0;
 	}
 }

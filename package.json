@@ -1,31 +1,44 @@
 {
-  "name": "porto",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.13",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.2",
-    "next": "13.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-easy-marquee": "^1.2.4",
-    "react-scroll": "^1.8.8",
-    "typescript": "4.8.4"
-  },
-  "devDependencies": {
-    "@types/react-scroll": "^1.8.4"
-  }
+	"name": "porto",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"@mui/icons-material": "^5.10.9",
+		"@mui/material": "^5.10.13",
+		"@mui/styles": "^5.10.10",
+		"@n8tb1t/use-scroll-position": "^2.0.3",
+		"@types/node": "18.11.9",
+		"@types/react": "18.0.25",
+		"@types/react-dom": "18.0.8",
+		"@types/styled-components": "^5.1.26",
+		"eslint": "8.27.0",
+		"eslint-config-next": "13.0.2",
+		"next": "13.0.2",
+		"react": "18.2.0",
+		"react-dnd": "^16.0.1",
+		"react-dnd-html5-backend": "^16.0.1",
+		"react-dom": "18.2.0",
+		"react-easy-marquee": "^1.2.4",
+		"react-headless-tabs": "^6.0.3",
+		"react-icons": "^4.7.1",
+		"react-material-ui-carousel": "^3.4.2",
+		"react-scroll": "^1.8.8",
+		"react-swipeable-views": "^0.14.0",
+		"styled-components": "^5.3.6",
+		"swiper": "^8.4.5",
+		"typescript": "4.8.4"
+	},
+	"devDependencies": {
+		"@types/react-scroll": "^1.8.4",
+		"@types/react-swipeable-views": "^0.13.1",
+		"@types/react-swipeable-views-utils": "^0.13.4"
+	}
 }

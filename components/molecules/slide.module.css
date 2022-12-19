@@ -1,0 +1,38 @@
+.slide {
+	overflow: hidden;
+	visibility: hidden;
+	height: 0;
+	transition: opacity 2s ease-in-out;
+	-webkit-transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+}
+
+.slide-container {
+	position: relative;
+	margin: auto;
+}
+
+.select {
+	overflow: hidden;
+	visibility: visible;
+	transition: opacity 2s ease-in-out;
+	-webkit-transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+}
+
+.navButton {
+	background-color: #fff;
+	color: #000;
+	border-radius: 0px;
+	width: 30px;
+	height: 30px;
+	transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+}

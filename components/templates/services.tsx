@@ -1,6 +1,7 @@
 import { Container, Typography, Grid, Card, CardContent, CardMedia, Chip } from "@mui/material";
 import CustomImage from "../atoms/image";
 import styles from "../css.module.css";
+import Slide from "../molecules/slide";
 
 export default function Services() {
 	const services = [
@@ -11,15 +12,9 @@ export default function Services() {
 			icon: "/software.png",
 		},
 		{
-			key: 1,
-			title: "API Solutions",
-			tags: ["REST", "SOAP", "RPC", "WebSocket", "SSE", "GraphQL"],
-			icon: "/api.png",
-		},
-		{
 			key: 2,
 			title: "Cloud & DevOps",
-			tags: ["Docker", "Kubernetes", "CI/CD", "Auto Scale", "Cloud Host"],
+			tags: ["Docker", "Kubernetes", "CI/CD", "Auto Scale", "Cloud Infrastructure"],
 			icon: "/cicd.png",
 		},
 		{
@@ -30,17 +25,17 @@ export default function Services() {
 		},
 	];
 	return (
-		<Container sx={{ py: { md: "30px", xs: "15px" } }}>
+		<Container sx={{ py: { md: "30px", xs: "15px" } }} maxWidth="xl">
 			<Grid container spacing={2} justifyContent="space-between" alignItems="center" direction="row">
 				<Grid item xs={12}>
-					<Typography
-						variant="h5"
-						gutterBottom
-						sx={{ textAlign: "center", fontFamily: "Source Code Pro", fontWeight: 500 }}
-					>
-						&lt;Services&gt;
+					<Typography variant="h5" gutterBottom sx={{ textAlign: "center", fontFamily: "Poppins", fontWeight: 500 }}>
+						Services
 					</Typography>
-					<Typography variant="body2" sx={{ textAlign: "center", fontFamily: "Source Code Pro", fontWeight: 400 }}>
+					<Typography
+						variant="body2"
+						sx={{ textAlign: "center", fontFamily: "Poppins", fontWeight: 400 }}
+						className={styles.noselect}
+					>
 						What I can offer at the moment, although I am eager to learn something new.
 					</Typography>
 				</Grid>
@@ -48,14 +43,13 @@ export default function Services() {
 				<Grid item container md={8} xs={12} spacing={1} direction="row">
 					{services.map((item) => {
 						return (
-							<Grid item xs={12} md={6} key={item.key}>
+							<Grid item xs={12} md={4} key={item.key}>
 								<Card
 									sx={{
-										border: "2px solid #e4ff1a",
 										height: "100%",
 										borderRadius: 0,
-										backgroundColor: "#e4ff1a",
-										color: "#020100",
+										backgroundColor: "#fff",
+										color: "#000",
 									}}
 									elevation={0}
 								>
@@ -63,7 +57,7 @@ export default function Services() {
 										<CustomImage width="20px" priority={false} src={item.icon} alt={item.icon} />
 									</CardMedia>
 									<CardContent>
-										<Typography variant="h5" gutterBottom sx={{ fontFamily: "Source Code Pro" }}>
+										<Typography variant="h5" gutterBottom sx={{ fontFamily: "Poppins" }}>
 											{item.title}
 										</Typography>
 										{item.tags.map((tag) => {
@@ -73,11 +67,11 @@ export default function Services() {
 													label={tag}
 													variant="outlined"
 													sx={{
-														backgroundColor: "#020100",
+														backgroundColor: "#000",
 														borderRadius: 0,
-														border: "1px solid #020100",
-														color: "#e4ff1a",
-														fontFamily: "Source Code Pro",
+														border: "1px solid #000",
+														color: "#fff",
+														fontFamily: "Poppins",
 														mr: 1,
 														mt: 1,
 													}}
@@ -91,15 +85,6 @@ export default function Services() {
 					})}
 				</Grid>
 				<Grid item xs={0} md={2} />
-				<Grid item xs={12}>
-					<Typography
-						variant="h5"
-						gutterBottom
-						sx={{ textAlign: "center", fontFamily: "Source Code Pro", fontWeight: 500 }}
-					>
-						&lt;/Services&gt;
-					</Typography>
-				</Grid>
 			</Grid>
 		</Container>
 	);

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><rect width="1000" height="1000" rx="200" ry="200" fill="#141414"></rect><g transform="matrix(0.7771129145064778,0,0,0.7771129145064778,150.0000021766317,238.77349412874622)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="900.77" height="672.3"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900.77 672.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 50px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <line class="cls-1" x1="768.86" y1="654.62" x2="131.91" y2="17.68"></line>
+      <line class="cls-1" x1="900.77" y1="336.15" y2="336.15"></line>
+      <line class="cls-1" x1="768.86" y1="17.68" x2="131.91" y2="654.62"></line>
+    </g>
+  </g>
+</svg></svg></g></svg>

@@ -1,81 +1,70 @@
+import { useState, useEffect, useCallback } from "react";
 import { Container, Grid, Typography, ButtonBase } from "@mui/material";
 import { Element } from "react-scroll";
 import { GetInTouch } from "../atoms/button";
 import Image from "next/image";
 import styles from "../css.module.css";
 import Socmed from "../atoms/socmed";
+import { FaArrowDown } from "react-icons/fa";
 
 export default function Intro() {
+	const [text, setText] = useState("");
+	const [i, setI] = useState(1);
+	const shuffle = useCallback(() => {
+		const content = ["actuate", "integrate", "elevate"];
+		setText(content[i - 1]);
+		setI((prev) => (prev > content.length - 1 ? 1 : prev + 1));
+	}, [i]);
+
+	useEffect(() => {
+		const intervalID = setInterval(shuffle, 500);
+		return () => clearInterval(intervalID);
+	}, [shuffle]);
+
 	return (
-		<Element name="about">
-			<Container>
-				<Grid container justifyContent="space-between" sx={{ minHeight: { md: "70vh", xs: "50vh" } }}>
+		<Element name="intro">
+			<Container maxWidth="xl">
+				<Grid
+					container
+					justifyContent="space-between"
+					alignItems="center"
+					sx={{ textAlign: "left", marginTop: { xs: "100px", md: "150px" } }}
+				>
 					<Grid item xs={12} sx={{ marginBottom: "30px" }}>
-						<Grid container alignItems="center">
-							<Grid item xs={1} sx={{ marginRight: "5px" }}>
-								<div style={{ height: "1px", borderTop: "1px solid #F2F4F3" }} />
-							</Grid>
-							<Grid item>
-								<Typography variant="body2" className={styles.noselect} style={{ letterSpacing: "3px" }}>
-									HELLO, I AM
-								</Typography>
-							</Grid>
+						<Grid container alignItems="center" justifyContent="center">
 							<Grid item xs={12}>
-								<Typography variant="h1" className={styles.noselect} sx={{ fontWeight: 500 }}>
-									<span style={{ fontWeight: 800 }}>TITAN</span> RUKMANA
+								<Typography variant="h5" sx={{ fontFamily: "Fira Code", color: "#aaa", fontWeight: 500 }}>
+									Hello, I am
+								</Typography>
+								<Typography
+									variant="h2"
+									className={styles.noselect}
+									sx={{ fontWeight: 600, fontSize: { md: "60px", xs: "40px" } }}
+								>
+									Titan Rukmana. <br />I {text} digital experiences.
 								</Typography>
 							</Grid>
 						</Grid>
-						<Grid container sx={{ marginBottom: 4 }}>
-							<Grid item xs={12}>
-								<Typography
-									variant="h6"
-									className={styles.noselect}
-									sx={{ fontWeight: 500, display: { xs: "inline", md: "block" } }}
-								>
-									Full stack software developer currently based in Indonesia.
-								</Typography>{" "}
-								<Typography
-									variant="h6"
-									className={styles.noselect}
-									sx={{ fontWeight: 500, display: { xs: "inline", md: "block" } }}
-								>
-									I find, combine, and align <span className={styles.underline}>any digital experience</span> you can
-									think of.
-								</Typography>
-							</Grid>
-						</Grid>
-						<Grid container alignItems="center" spacing={5}>
-							<Grid item xs={12} md="auto" sx={{ textAlign: { xs: "center", md: "left" } }}>
-								<GetInTouch href="mailto: titan170300@gmail.com?subject=Business Inquiry">
-									Let&apos;s get in touch
+						<Grid
+							container
+							alignItems="center"
+							spacing={5}
+							justifyContent="flex-start"
+							sx={{ mt: { md: "25px", xs: "0px" } }}
+						>
+							<Grid item xs="auto" sx={{ textAlign: "left" }}>
+								<GetInTouch href="mailto: titan170300@gmail.com?subject=Business Inquiry" disableRipple>
+									let&apos;s get in touch
 								</GetInTouch>
 							</Grid>
 							<Grid
 								container
 								item
-								xs={12}
-								md="auto"
+								xs="auto"
 								spacing={3}
-								sx={{ justifyContent: { xs: "center", md: "flex-start" } }}
+								sx={{ justifyContent: "center", fontSize: { md: "25px", xs: "20px" } }}
 							>
 								<Socmed />
-							</Grid>
-						</Grid>
-					</Grid>
-					<Grid item sx={{ marginTop: "auto" }} xs={12} md={4}>
-						<Grid container sx={{ justifyContent: { md: "flex-start", xs: "center" } }} alignItems="center" spacing={1}>
-							<Grid item>
-								<Image className={styles.arrow} src="/arrow_bottom.png" height={20} width={20} alt="" />
-							</Grid>
-							<Grid item>
-								<Typography
-									variant="subtitle1"
-									sx={{ fontWeight: 500, fontFamily: "Source Code Pro" }}
-									className={styles.noselect}
-								>
-									Scroll to explore
-								</Typography>
 							</Grid>
 						</Grid>
 					</Grid>

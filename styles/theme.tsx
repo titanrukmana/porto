@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
 	typography: {
-		fontFamily: `"Source Code Pro", monospace`,
+		fontFamily: `"Poppins", sans-serif`,
 		fontSize: 14,
 		fontWeightLight: 300,
 		fontWeightRegular: 400,
@@ -45,10 +45,17 @@ theme.typography.h6 = {
 	},
 };
 
+theme.typography.body1 = {
+	fontSize: "16px",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "13px",
+	},
+};
+
 theme.typography.body2 = {
 	fontSize: "14px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "12px",
+		fontSize: "10px",
 	},
 };
 

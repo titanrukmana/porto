@@ -30,32 +30,34 @@ export default function TopDrawer() {
 
 	const section = [
 		{ key: 0, point: "about" },
-		{ key: 1, point: "services" },
+		{ key: 1, point: "works" },
+		{ key: 2, point: "tools" },
 	];
 
 	const list = () => (
 		<Box
 			sx={{
-				color: "#F2F4F3",
-				backgroundColor: "#020100",
+				color: "#fff",
+				backgroundColor: "#000",
 				height: "100vh",
 			}}
 			role="presentation"
 			onKeyDown={toggleDrawer(false)}
 		>
-			<Container maxWidth="lg">
+			<Container maxWidth="xl">
 				<Grid
 					container
 					direction="column"
 					alignItems="center"
 					justifyContent="center"
-					sx={{ height: { xs: "80vh", md: "100vh" }, px: { xs: 3, md: 5 } }}
+					sx={{ minHeight: { xs: "80vh", md: "100vh" }, px: { xs: 3, md: 5 } }}
+					className={visible ? styles.visible : styles.hidden}
 				>
 					<Grid item sx={{ textAlign: "center" }}>
 						<List>
 							{section.map((item) => {
 								return (
-									<Box key={item.key} style={{ marginTop: item.key == 0 ? 0 : 15, marginBottom: 15 }}>
+									<Box key={item.key}>
 										<Link
 											to={item.point}
 											offset={-30}
@@ -66,7 +68,7 @@ export default function TopDrawer() {
 										>
 											<DrawerButton disableRipple className={styles.drawerButton}>
 												<Typography variant="h3" onClick={toggleDrawer(false)} className={styles.drawerText}>
-													&lt;{item.point} /&gt;
+													{item.point}
 												</Typography>
 											</DrawerButton>
 										</Link>
@@ -78,8 +80,8 @@ export default function TopDrawer() {
 					<Grid item container justifyContent="center" alignItems="center" direction="row" spacing={4}>
 						<Socmed />
 					</Grid>
-					<Grid item sx={{ marginTop: "20px" }}>
-						<Typography variant="subtitle2" sx={{ color: "#F2F4F3", fontFamily: "Source Code Pro", fontWeight: 400 }}>
+					<Grid item sx={{ marginTop: "35px" }}>
+						<Typography variant="subtitle2" sx={{ color: "#fff", fontFamily: "Fira Code", fontWeight: 400 }}>
 							titan170300@gmail.com
 						</Typography>
 					</Grid>
@@ -93,6 +95,7 @@ export default function TopDrawer() {
 			<Button
 				onClick={toggleDrawer(!visible)}
 				disableRipple={true}
+				className={styles.openbutton}
 				sx={{
 					"&:hover": {
 						backgroundColor: "inherit",
@@ -101,7 +104,7 @@ export default function TopDrawer() {
 			>
 				<Hamburger />
 			</Button>
-			<Drawer anchor="top" open={visible} onClose={toggleDrawer(false)} transitionDuration={{ enter: 500, exit: 1000 }}>
+			<Drawer anchor="top" open={visible} onClose={toggleDrawer(false)} transitionDuration={{ enter: 700, exit: 700 }}>
 				{list()}
 			</Drawer>
 		</Grid>

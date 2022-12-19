@@ -24,16 +24,17 @@ export default function Stack() {
 		{ key: 14, name: "redis" },
 		{ key: 15, name: "influxdb" },
 		{ key: 16, name: "docker" },
-		{ key: 17, name: "graphql" },
+		{ key: 17, name: "kubernetes" },
+		{ key: 18, name: "graphql" },
 	];
 	return (
 		<Element name="services">
-			<Grid container justifyContent="flex-start" spacing={5}>
-				<Grid item xs={12} sx={{ textAlign: "center" }}>
+			<Grid container justifyContent="flex-start" spacing={0}>
+				{/* <Grid item xs={12} sx={{ textAlign: "center" }}>
 					<Typography variant="h5">Tech Stack</Typography>
-				</Grid>
+				</Grid> */}
 				<Grid item xs={12}>
-					<Marquee background="#E4FF1A" duration={40000}>
+					<Marquee background="#fff" duration={40000}>
 						{stack.map((item) => {
 							return (
 								<Grid item container key={item.key} sx={{ alignItems: "center", mx: "5px" }}>
