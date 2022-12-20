@@ -53,7 +53,7 @@ export default function Slide() {
 						>
 							<Grid item xs={12} style={{ color: "#fff" }}>
 								<Typography variant="h5">{item.title}</Typography>
-								<Typography variant="subtitle2" style={{ fontWeight: 400 }} gutterBottom>
+								<Typography variant="subtitle2" style={{ fontWeight: 400, color: "#aaa" }} gutterBottom>
 									{item.date}
 								</Typography>
 							</Grid>
@@ -79,7 +79,7 @@ export default function Slide() {
 								{item.jobs.map((jobs, idx) => {
 									return (
 										<li key={idx}>
-											<Typography variant="body2" sx={{ display: "inline", color: "#aaa" }}>
+											<Typography variant="body2" sx={{ display: "inline", color: "#fff" }}>
 												{jobs}
 											</Typography>
 										</li>

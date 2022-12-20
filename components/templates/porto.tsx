@@ -12,12 +12,7 @@ export default function Porto() {
 				<Grid container alignItems="center" direction="row">
 					<Grid item xs={12}>
 						<Typography variant="h2" sx={{ fontWeight: 500 }}>
-							Works
-						</Typography>
-					</Grid>
-					<Grid item xs={12}>
-						<Typography variant="h6" sx={{ color: "#aaa", fontWeight: 400, textAlign: "justify" }} gutterBottom>
-							Some works I did.
+							Featured Works
 						</Typography>
 					</Grid>
 					<Grid item sx={{ display: { xs: "none", md: "block" } }} xs={12}>

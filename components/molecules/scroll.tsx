@@ -15,7 +15,7 @@ export default function ScrollShowCase() {
 						key={item.idx}
 						alignItems="flex-start"
 						direction={(idx + 1) % 2 != 0 ? "row" : "row-reverse"}
-						spacing={8}
+						spacing={3}
 					>
 						<Grid
 							item
@@ -25,7 +25,7 @@ export default function ScrollShowCase() {
 								top: "90px",
 							}}
 						>
-							<Typography variant="body1" sx={{ fontFamily: "Fira Code", fontWeight: 400 }}>
+							<Typography variant="body1" sx={{ fontFamily: "Fira Code", fontWeight: 400, color: "#aaa" }}>
 								{item.date}
 							</Typography>
 							<Typography variant="h4" sx={{ fontWeight: 500 }} gutterBottom>
@@ -41,7 +41,7 @@ export default function ScrollShowCase() {
 								{item.jobs.map((jobs, idx) => {
 									return (
 										<li key={idx}>
-											<Typography variant="body2" sx={{ display: "inline", color: "#aaa" }}>
+											<Typography variant="body2" sx={{ display: "inline", color: "#fff" }}>
 												{jobs}
 											</Typography>
 										</li>

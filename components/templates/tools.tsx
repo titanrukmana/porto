@@ -22,7 +22,7 @@ export default function Tools() {
 						{content.map((item, idx) => {
 							const len = item.contents.length;
 							return (
-								<Grid item xs={12} lg={4} key={idx} sx={{ mt: { xs: idx == 0 ? 0 : 5, lg: 0 } }}>
+								<Grid item xs={12} lg={4} key={idx} sx={{ mt: { xs: idx == 0 ? 2 : 5, lg: 0 } }}>
 									<Typography variant="h5" sx={{ fontWeight: 500 }}>
 										{item.title}
 									</Typography>

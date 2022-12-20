@@ -155,10 +155,10 @@
 }
 
 .rotate {
-	animation-name: rotate;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: cubic-bezier(0.36, 0.45, 0.63, 0.53);
+	animation-name: rotate, translate;
+	animation-duration: 1s, 2s;
+	animation-iteration-count: infinite, infinite;
+	animation-timing-function: cubic-bezier(0.36, 0.45, 0.63, 0.53), linear;
 	transform-origin: 50% 50%;
 	transform-box: fill-box;
 }
@@ -169,11 +169,18 @@
 	}
 	25% {
 		transform: rotate(8deg);
-		translate: 4px;
 	}
 	75% {
 		transform: rotate(-8deg);
-		translate: -4px;
+	}
+}
+
+@keyframes translate {
+	25% {
+		translate: 5px;
+	}
+	75% {
+		translate: -5px;
 	}
 }
 

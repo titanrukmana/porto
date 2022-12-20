@@ -60,14 +60,14 @@ export default function TopDrawer() {
 									<Box key={item.key}>
 										<Link
 											to={item.point}
-											offset={-30}
+											offset={-100}
 											spy={true}
 											smooth={true}
 											delay={100}
 											style={{ cursor: "pointer" }}
 										>
-											<DrawerButton disableRipple className={styles.drawerButton}>
-												<Typography variant="h3" onClick={toggleDrawer(false)} className={styles.drawerText}>
+											<DrawerButton disableRipple className={styles.drawerButton} onClick={toggleDrawer(false)}>
+												<Typography variant="h3" className={styles.drawerText}>
 													{item.point}
 												</Typography>
 											</DrawerButton>

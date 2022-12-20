@@ -1,14 +1,21 @@
 import { Container, Grid, Typography } from "@mui/material";
 import { Element } from "react-scroll";
+import CustomImage from "../atoms/image";
 
 export default function Footer() {
 	return (
 		<Element name="footer">
-			<Container sx={{ pt: { md: 20, xs: 15 }, pb: { md: 10, xs: 5 } }} maxWidth="xl">
+			<Container sx={{ pt: { md: 20, xs: 15 }, pb: 5 }} maxWidth="xl">
 				<Grid container alignItems="center" justifyContent="center">
-					<Grid item xs={12} sx={{ textAlign: "center", mt: 3 }}>
-						<Typography sx={{ fontFamily: "Fira Code", display: "inline", color: "#aaa" }} gutterBottom>
-							© 2022 Titan Rukmana
+					<Grid item sx={{ textAlign: "center", mt: 3 }}>
+						<CustomImage src={"/logo.svg"} alt={"logo"} width="40px" priority={false} />
+					</Grid>
+					<Grid item xs={12} sx={{ textAlign: "center", mt: 2 }}>
+						<Typography sx={{ fontFamily: "Fira Code", color: "#aaa" }} gutterBottom>
+							© 2020 - 2022
+						</Typography>
+						<Typography sx={{ fontFamily: "Fira Code", color: "#aaa" }} gutterBottom>
+							Bandung, West Java, Indonesia
 						</Typography>
 					</Grid>
 				</Grid>
