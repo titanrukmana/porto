@@ -55,7 +55,7 @@ theme.typography.body1 = {
 theme.typography.body2 = {
 	fontSize: "14px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "10px",
+		fontSize: "12px",
 	},
 };
 

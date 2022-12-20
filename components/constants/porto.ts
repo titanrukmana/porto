@@ -48,7 +48,7 @@ export const contents = [
 	},
 	{
 		idx: 3,
-		title: "SIMRS",
+		title: "HMIS",
 		jobs: [
 			"Developed hospital management information system",
 			"Managed a team of three",

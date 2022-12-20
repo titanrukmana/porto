@@ -3,6 +3,7 @@ import React from "react";
 import CustomImage from "../atoms/image";
 import { contents } from "../constants/porto";
 import Link from "@mui/material/Link";
+import styles from "../css.module.css";
 
 export default function ScrollShowCase() {
 	return (
@@ -33,14 +34,13 @@ export default function ScrollShowCase() {
 							</Typography>
 							<ul
 								style={{
-									listStylePosition: "inside",
 									padding: 0,
 									color: "#aaa",
 								}}
 							>
 								{item.jobs.map((jobs, idx) => {
 									return (
-										<li key={idx}>
+										<li key={idx} style={{ marginLeft: "1.1em" }}>
 											<Typography variant="body2" sx={{ display: "inline", color: "#fff" }}>
 												{jobs}
 											</Typography>

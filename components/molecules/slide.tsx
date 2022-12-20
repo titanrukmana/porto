@@ -68,7 +68,6 @@ export default function Slide() {
 							</Grid>
 							<ul
 								style={{
-									listStylePosition: "inside",
 									padding: 0,
 									columns: 2,
 									MozColumns: 2,
@@ -78,7 +77,7 @@ export default function Slide() {
 							>
 								{item.jobs.map((jobs, idx) => {
 									return (
-										<li key={idx}>
+										<li key={idx} style={{ marginLeft: "1.1em" }}>
 											<Typography variant="body2" sx={{ display: "inline", color: "#fff" }}>
 												{jobs}
 											</Typography>
