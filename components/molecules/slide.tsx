@@ -34,12 +34,12 @@ export default function Slide() {
 			<Grid container justifyContent="flex-end">
 				<Grid item>
 					<IconButton onClick={handlePrev} className={styles.navButton} disableRipple>
-						<IoMdArrowDropleft />
+						<Typography>❮</Typography>
 					</IconButton>
 				</Grid>
 				<Grid item>
 					<IconButton onClick={handleNext} className={styles.navButton} disableRipple>
-						<IoMdArrowDropright />
+						<Typography>❯</Typography>
 					</IconButton>
 				</Grid>
 			</Grid>
@@ -76,9 +76,9 @@ export default function Slide() {
 									color: "#aaa",
 								}}
 							>
-								{item.jobs.map((jobs) => {
+								{item.jobs.map((jobs, idx) => {
 									return (
-										<li key={jobs}>
+										<li key={idx}>
 											<Typography variant="body2" sx={{ display: "inline", color: "#aaa" }}>
 												{jobs}
 											</Typography>
@@ -87,10 +87,10 @@ export default function Slide() {
 								})}
 							</ul>
 							<Grid container item justifyContent="center">
-								{item.tech.map((tech) => {
+								{item.tech.map((tech, idx) => {
 									return (
 										<Chip
-											key={tech}
+											key={idx}
 											label={tech}
 											variant="outlined"
 											sx={{

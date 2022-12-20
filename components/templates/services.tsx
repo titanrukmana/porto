@@ -60,10 +60,10 @@ export default function Services() {
 										<Typography variant="h5" gutterBottom sx={{ fontFamily: "Poppins" }}>
 											{item.title}
 										</Typography>
-										{item.tags.map((tag) => {
+										{item.tags.map((tag, idx) => {
 											return (
 												<Chip
-													key={"test"}
+													key={idx}
 													label={tag}
 													variant="outlined"
 													sx={{

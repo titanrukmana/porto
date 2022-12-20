@@ -38,9 +38,9 @@ export default function ScrollShowCase() {
 									color: "#aaa",
 								}}
 							>
-								{item.jobs.map((jobs) => {
+								{item.jobs.map((jobs, idx) => {
 									return (
-										<li key={jobs}>
+										<li key={idx}>
 											<Typography variant="body2" sx={{ display: "inline", color: "#aaa" }}>
 												{jobs}
 											</Typography>
@@ -48,10 +48,10 @@ export default function ScrollShowCase() {
 									);
 								})}
 							</ul>
-							{item.tech.map((tech) => {
+							{item.tech.map((tech, idx) => {
 								return (
 									<Chip
-										key={tech}
+										key={idx}
 										label={tech}
 										variant="outlined"
 										sx={{
