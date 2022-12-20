@@ -12,16 +12,6 @@ export default class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
 						rel="stylesheet"
 					/>
-					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-					<meta property="og:url" content="https://titanrukmana.my.id" />
-					<meta property="og:type" content="website" />
-					<meta property="og:title" content="Titan Rukmana's Brief Portfolio" />
-					<meta property="og:description" content="Titan Rukmana's brief portfolio as a full-stack developer" />
-					<meta
-						property="og:image"
-						content="https://titanrukmana.my.id/_next/image?url=%2Fshowcase%2FPhotobooth.png&w=1920&q=75"
-					/>
-					<link rel="shortcut icon" href="/icon/favicon.ico" />
 				</Head>
 				<body>
 					<Main />

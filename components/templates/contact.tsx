@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import { GetInTouch } from "../atoms/button";
 import Socmed from "../atoms/socmed";
 import { MdSailing } from "react-icons/md";
+import styles from "../css.module.css";
 
 export default function Contact() {
 	return (
@@ -25,9 +26,11 @@ export default function Contact() {
 							I&apos;m ready to ship
 						</Typography>
 						<GetInTouch href="mailto: titan170300@gmail.com">
-							<Typography sx={{ fontFamily: "Fira Code" }}>
-								<MdSailing />
-							</Typography>
+							<div className={styles.rotate}>
+								<Typography sx={{ fontFamily: "Fira Code" }}>
+									<MdSailing />
+								</Typography>
+							</div>
 						</GetInTouch>
 					</Grid>
 					<Grid
