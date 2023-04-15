@@ -12,7 +12,7 @@ export default function Footer() {
 					</Grid>
 					<Grid item xs={12} sx={{ textAlign: "center", mt: 2 }}>
 						<Typography sx={{ fontFamily: "Fira Code", color: "#aaa" }} gutterBottom>
-							© 2020 - 2022
+							© 2023
 						</Typography>
 						<Typography sx={{ fontFamily: "Fira Code", color: "#aaa" }} gutterBottom>
 							Bandung, West Java, Indonesia

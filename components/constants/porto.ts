@@ -10,11 +10,8 @@ export const contents = [
 			"Interface users with centralized printing system",
 		],
 		gallery: "Photobooth.png",
-		date: "2021 — Present",
+		date: "2021 — 2023",
 		tech: ["Next.js", "Express.js", "Electron.js", "MongoDB", "Redis", "AWS", "Typescript"],
-		source: {
-			web: "https://photobooth.ospesya.com/alt80plus",
-		},
 	},
 	{
 		idx: 1,

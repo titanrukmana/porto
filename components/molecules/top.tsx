@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { Link } from "react-scroll";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import styles from "../css.module.css";
+
 export default function Top() {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const handleScroll = () => {
@@ -26,6 +28,7 @@ export default function Top() {
 				opacity: scrollPosition < 400 ? 0 : 1,
 				display: scrollPosition < 400 ? "none" : "block",
 			}}
+			className={styles.top}
 		>
 			<Link
 				to="intro"
