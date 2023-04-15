@@ -57,15 +57,6 @@ export default function Slide() {
 									{item.date}
 								</Typography>
 							</Grid>
-							<Grid item container xs={12}>
-								{item.source ? (
-									<Link target="_blank" rel="noopener noreferrer" href={item.source.web || item.source.github}>
-										<CustomImage src={"/showcase/" + item.gallery} alt={item.gallery} priority={false} />
-									</Link>
-								) : (
-									<CustomImage src={"/showcase/" + item.gallery} alt={item.gallery} priority={false} />
-								)}
-							</Grid>
 							<ul
 								style={{
 									padding: 0,
@@ -110,32 +101,6 @@ export default function Slide() {
 								})}
 							</Grid>
 							<Grid item xs={12} sx={{ mt: 2, textAlign: "center" }}>
-								{item.source?.web ? (
-									<Link
-										target="_blank"
-										rel="noopener noreferrer"
-										sx={{
-											color: "#fff",
-											textDecoration: "none",
-											textTransform: "none",
-											"&:hover": {
-												color: "#e4ff1a",
-											},
-										}}
-										href={item.source.web}
-									>
-										<Typography
-											sx={{
-												fontWeight: 400,
-												fontFamily: "Fira Code",
-												minWidth: "1px",
-												display: "inline",
-											}}
-										>
-											{item.source.web.split("/")[2]} →
-										</Typography>
-									</Link>
-								) : null}
 								{item.source?.github ? (
 									<Link
 										target="_blank"
